@@ -1,0 +1,82 @@
+# -----------------------------------------------------------------------------
+# General: http://sphinx.pocoo.org/config.html#general-configuration
+# -----------------------------------------------------------------------------
+
+project: H\&H Gap Analysis
+author: Eric Caudal
+copyright: ${date %Y}, ${author}
+version: '2016.09'
+release: '3.0'
+
+master_doc: content
+source_suffix: .rst
+
+rst_prolog: |
+    .. role:: latex(raw)
+       :format: latex
+    .. role:: html(raw)
+       :format: html
+
+# -----------------------------------------------------------------------------
+# HTML: http://sphinx.pocoo.org/config.html#options-for-html-output
+# -----------------------------------------------------------------------------
+
+html_theme: default
+html_static_path: [_static]
+htmlhelp_basename: sourcedoc
+
+# -----------------------------------------------------------------------------
+# LaTex: http://sphinx.pocoo.org/config.html#options-for-latex-output
+# -----------------------------------------------------------------------------
+
+latex_elements:
+    papersize: letterpaper ## letterpaper or a4paper
+    pointsize: 12pt ## 10pt, 11pt or 12pt
+
+    inputenc: |
+        \\usepackage[utf8]{inputenc}
+    fontenc: |
+        \\usepackage[T1]{fontenc}
+    fontpkg: |
+        \\usepackage{libertine}
+    preamble: |
+        \\onecolumn
+    maketitle: |
+        \\begin{titlepage}
+        \\begin{center}
+        \\begin{minipage}[t][0.550\\textheight]{\\linewidth}
+        \\rule{\\textwidth}{2pt}
+        \\begin{center}
+        \\huge\\textsc{${project}}
+        \\end{center}
+        \\rule{\\textwidth}{2pt}
+        \\end{minipage}
+        \\begin{minipage}[b][0.425\\textheight]{\\linewidth}
+        \\begin{center}
+        \\includegraphics[scale=0.250]{elico.png}\\\\
+        \\bigskip\\textsc{${author}}\\\\
+        \\tiny{${version}--${release}}
+        \\end{center}
+        \\rule{\\textwidth}{2pt}
+        \\end{minipage}
+        \\end{center}
+        \\end{titlepage}
+    tableofcontents: |
+        \\cleardoublepage\\tableofcontents
+    footer: |
+        \\rule{\\linewidth}{2pt}
+    printindex: |
+        \\printindex
+
+latex_documents:
+ - [content, source.tex, '${project}', '${author}', manual]
+
+latex_additional_files: [elico.png] ## list of file names
+latex_show_urls: no ## no, footnote or inline
+
+# -----------------------------------------------------------------------------
+# LaTex: http://github.com/hsk81/notex/wiki/LaTex-Backend:-pdflatex-vs-xelatex
+# -----------------------------------------------------------------------------
+
+latex_backend: pdflatex
+
