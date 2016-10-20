@@ -28,20 +28,6 @@ Contact inherit parent company's attribute
     :depth: 4
     
 
-Introduction
-############
-
-This is an image/description/workflow:
-
-
-.. image:: images/FS0000ELI/fields_1.png
-   :width: 600 px
-   :alt: "rank" in company
-
-.. image:: images/FS0000ELI/fields_2.png
-   :width: 600 px
-   :alt: fields for "salesperson", "sales team", "is a key account",
-         "key account manager".
 
 
 Customer Story
@@ -72,7 +58,7 @@ Gap
    "rank", "key account manager" that fields in contact will inherit from
    parent Company's attribute for these fields.
 #. Once company's attribute changed, the contact under this company will
-   auto synchronise with these changes.
+   auto synchronize with these changes.
 #. Once the module installed in server, the contact will auto synchronise
    with Company's attribute.
 #. For the new created contact, will also inherit company's attribute as 
@@ -81,6 +67,16 @@ Gap
 #. Only effective when the contact is "is customer" checkbox checked for company
    and contact.
 
+#. This is the images/description:
+
+.. image:: images/FS0000ELI/fields_1.png
+   :width: 600 px
+   :alt: "rank" in company
+
+.. image:: images/FS0000ELI/fields_2.png
+   :width: 600 px
+   :alt: fields for "salesperson", "sales team", "is a key account",
+         "key account manager".
 
 
 Revision History
